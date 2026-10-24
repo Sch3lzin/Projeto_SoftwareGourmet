@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+:root {
+  --cor-primaria: #391d34;
+  --cor-secundaria: #a24d52;
+  --cor-terciaria: #f8af8c;
+
+  --text-color-01: #fafafa;
+
+  --font-family-01: "Merriweather", serif;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  font-family: var(--font-family-01);
+  color: var(--text-color-01);
+  padding-top: 5rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  background-color: var(--cor-secundaria);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menu a {
+  color: var(--text-color-01);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenu img {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%);
+}
+
+.apresentation {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.apresentation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../imgs/sala.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.55);
+  z-index: -1;
+}
+
+.apresentation h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.sobre img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.sobre h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.cardapio {
+  padding: 4rem 1rem;
+}
+
+.cardapio h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pratos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.prato {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.prato:hover {
+  transform: translateY(-6px);
+}
+
+.prato img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.prato h3 {
+  margin: 1rem 1rem 0.5rem;
+}
+
+.prato p {
+  margin: 0 1rem;
+  flex-grow: 1;
+}
+
+.preco {
+  margin: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Perguntas frequentes */
+.perguntas {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.perguntas h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.perguntas details {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.perguntas summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.perguntas summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.2rem;
+}
+
+.perguntas details[open] summary::after {
+  content: "−";
+}
+
+.perguntas details p {
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: var(--cor-secundaria);
+  padding: 3rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.rodape-info p {
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+.rodape-autor {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.rodape iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
+
+  .mobileMenu {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--cor-secundaria);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+
+  .rodape {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pratos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pratos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+}

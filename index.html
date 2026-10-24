@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" type="image/png" href="./imgs/favicon-32x32.png" />
+    <title>Software Gourmet</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Software Gourmet</div>
+      <button class="mobileMenu" aria-label="Abrir menu" aria-expanded="false">
+        <img src="./imgs/menu.png" alt="" />
+      </button>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#perguntas">Perguntas</a>
+      </nav>
+    </header>
+    <div class="content">
+      <section id="home" class="apresentation">
+        <h1>Bem-vindo ao Software Gourmet</h1>
+        <p>Descubra o melhor da culinária com nossos pratos exclusivos!</p>
+      </section>
+      <section id="sobre" class="sobre">
+        <img src="./imgs/faixada.jpg" alt="Faixada do Restaurante" />
+        <div>
+          <h2>Sobre Nós</h2>
+          <p>
+            O Software Gourmet é um restaurante que oferece uma experiência
+            gastronômica única, combinando sabores autênticos e ingredientes
+            frescos para criar pratos deliciosos.
+          </p>
+        </div>
+      </section>
+      <section id="cardapio" class="cardapio">
+        <h2>Nosso Cardápio</h2>
+
+        <div class="pratos">
+          <article class="prato">
+            <img src="./imgs/prato06.jpg" alt="Salmão grelhado com legumes" />
+            <h3>Salmão Grelhado</h3>
+            <p>Posta de salmão grelhada com brócolis, batatas e cenoura.</p>
+            <span class="preco">R$ 72,00</span>
+          </article>
+
+          <article class="prato">
+            <img src="./imgs/prato1.jpg" alt="Carne ao molho com talharim" />
+            <h3>Carne ao Molho com Talharim</h3>
+            <p>
+              Carne macia ao molho especial, acompanhada de talharim artesanal.
+            </p>
+            <span class="preco">R$ 68,00</span>
+          </article>
+
+          <article class="prato">
+            <img src="./imgs/prato2.jpg" alt="Arroz com polvo e chouriço" />
+            <h3>Arroz de Polvo e Chouriço</h3>
+            <p>Arroz cremoso com polvo, chouriço, pimentões e ervilhas.</p>
+            <span class="preco">R$ 79,00</span>
+          </article>
+
+          <article class="prato">
+            <img src="./imgs/prato03.jpg" alt="Paella de frutos do mar" />
+            <h3>Paella de Frutos do Mar</h3>
+            <p>Camarões, mexilhões e azeitonas sobre arroz com açafrão.</p>
+            <span class="preco">R$ 89,00</span>
+          </article>
+
+          <article class="prato">
+            <img
+              src="./imgs/prato04.jpg"
+              alt="Bife com arroz verde e batata frita"
+            />
+            <h3>Bife com Arroz Verde</h3>
+            <p>Bife grelhado, arroz verde, batata frita e farofa.</p>
+            <span class="preco">R$ 54,00</span>
+          </article>
+
+          <article class="prato">
+            <img
+              src="./imgs/prato05.jpg"
+              alt="Fettuccine ao molho branco com bife"
+            />
+            <h3>Fettuccine com Bife</h3>
+            <p>Fettuccine ao molho branco com parmesão e bife grelhado.</p>
+            <span class="preco">R$ 62,00</span>
+          </article>
+        </div>
+      </section>
+      <section id="perguntas" class="perguntas">
+        <h2>Perguntas Frequentes</h2>
+
+        <details>
+          <summary>Vocês aceitam reservas?</summary>
+          <p>
+            Sim! Recomendamos reservar com antecedência, principalmente nos fins
+            de semana.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quais são as formas de pagamento?</summary>
+          <p>Aceitamos dinheiro, cartões de débito e crédito e Pix.</p>
+        </details>
+
+        <details>
+          <summary>Há opções vegetarianas no cardápio?</summary>
+          <p>
+            Sim, temos pratos vegetarianos. Consulte nossa equipe para saber as
+            opções do dia.
+          </p>
+        </details>
+
+        <details>
+          <summary>O restaurante possui estacionamento?</summary>
+          <p>
+            Sim, oferecemos estacionamento para nossos clientes próximo ao
+            restaurante.
+          </p>
+        </details>
+      </section>
+    </div>
+    <footer class="rodape">
+      <div class="rodape-info">
+        <div class="logo">Software Gourmet</div>
+        <p>Centro Universitário UGV (CTU)<br />União da Vitória - PR</p>
+        <p class="rodape-autor">Desenvolvido por Eng. de Software</p>
+      </div>
+
+      <iframe
+        title="Localização do Centro Universitário UGV em União da Vitória"
+        src="https://www.google.com/maps?q=Centro+Universit%C3%A1rio+UGV+Uni%C3%A3o+da+Vit%C3%B3ria+PR&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </footer>
+    <script src="./scripts/menu.js"></script>
+  </body>
+</html>
